@@ -4,3 +4,9 @@ D:\CS\Exercises1_2\Exercises1_2\obj\Debug\Exercises1_2.csprojAssemblyReference.c
 D:\CS\Exercises1_2\Exercises1_2\obj\Debug\Exercises1_2.csproj.CoreCompileInputs.cache
 D:\CS\Exercises1_2\Exercises1_2\obj\Debug\Exercises1_2.exe
 D:\CS\Exercises1_2\Exercises1_2\obj\Debug\Exercises1_2.pdb
+D:\CS\Algorithm\Exercises1_2\Exercises1_2\bin\Debug\Exercises1_2.exe
+D:\CS\Algorithm\Exercises1_2\Exercises1_2\bin\Debug\Exercises1_2.pdb
+D:\CS\Algorithm\Exercises1_2\Exercises1_2\obj\Debug\Exercises1_2.csprojAssemblyReference.cache
+D:\CS\Algorithm\Exercises1_2\Exercises1_2\obj\Debug\Exercises1_2.csproj.CoreCompileInputs.cache
+D:\CS\Algorithm\Exercises1_2\Exercises1_2\obj\Debug\Exercises1_2.exe
+D:\CS\Algorithm\Exercises1_2\Exercises1_2\obj\Debug\Exercises1_2.pdb

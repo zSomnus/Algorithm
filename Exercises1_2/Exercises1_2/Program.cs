@@ -43,20 +43,48 @@ namespace Exercises1_2
             //Insertion sort
             int[] array = new int[] { 31, 41, 59, 26, 41, 58 };
             //InsertionSort(array);
-            InsertionSort(array);
+            PrintInsertionSort(array);
+            PrintInsertionSortD(array);
+            AddBinary();
+            Console.ReadKey();
+        }
+
+        private static void AddBinary()
+        {
+            int n = 4;
+            bool[] array1 = new bool[n];
+            bool[] array2 = new bool[n];
+        }
+
+        private static void PrintInsertionSortD(int[] array)
+        {
+            InsertionSortD(array);
+
+            Console.WriteLine("The result of Insertion Sort (Descending order) is: ");
+
             foreach (var item in array)
             {
                 Console.WriteLine(item);
             }
+        }
 
-            Console.ReadKey();
+        private static void PrintInsertionSort(int[] array)
+        {
+            InsertionSort(array);
+
+            Console.WriteLine("The result of Insertion Sort (Ascending order) is: ");
+
+            foreach (var item in array)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         private static void InsertionSortD(int[] array)
         {
             int key;
             int i;
-            for (int j = 1; j < array.Length - 1; j++)
+            for (int j = 1; j < array.Length; j++)
             {
                 key = array[j];
                 i = j - 1;
@@ -73,7 +101,7 @@ namespace Exercises1_2
         {
             int key;
             int i;
-            for (int j = 0; j < array.Length - 1; j++)
+            for (int j = 1; j < array.Length; j++)
             {
                 key = array[j];
                 i = j - 1;
@@ -85,7 +113,5 @@ namespace Exercises1_2
                 array[i + 1] = key;
             }
         }
-
-        
     }
 }
