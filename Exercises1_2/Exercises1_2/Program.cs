@@ -67,7 +67,62 @@ namespace Exercises1_2
 
             Console.WriteLine($"Your number are {binaryNum1} ({binaryNum1.Length}) and {binaryNum2} ({binaryNum2.Length})");
 
+            bool[] array1 = new bool[binaryNum1.Length];
 
+            for (int i = 0; i < binaryNum1.Length; i++)
+            {
+                Console.WriteLine(binaryNum1.Substring(i, 1));
+                if (binaryNum1.Substring(i, 1) == "1")
+                {
+                    array1[i] = true;
+                }
+                else
+                {
+                    array1[i] = false;
+                }
+            }
+            foreach (var item in array1)
+            {
+                Console.WriteLine(item.ToString());
+            }
+
+            bool[] array2 = new bool[binaryNum2.Length];
+            for (int i = 0; i < binaryNum2.Length; i++)
+            {
+                Console.WriteLine(binaryNum2.Substring(i, 1));
+                if (binaryNum2.Substring(i, 1) == "1")
+                {
+                    array2[i] = true;
+                }
+                else
+                {
+                    array2[i] = false;
+                }
+            }
+            foreach (var item in array2)
+            {
+                Console.WriteLine(item.ToString());
+            }
+
+            Console.WriteLine("The final result is: ");
+            string total = Convert.ToString(num1 + num2, 2);
+            bool[] final = new bool[total.Length];
+            for (int i = 0; i < total.Length; i++)
+            {
+                Console.WriteLine(total.Substring(i, 1));
+                if (total.Substring(i, 1) == "1")
+                {
+                    final[i] = true;
+                }
+                else
+                {
+                    final[i] = false;
+                }
+            }
+            foreach (var item in final)
+            {
+                Console.WriteLine(item.ToString());
+            }
         }
 
         private static void PrintInsertionSortD(int[] array)
