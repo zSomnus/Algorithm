@@ -55,12 +55,12 @@ namespace Exercises1_2
             //int n = 4;
 
             Console.WriteLine("First binary number: ");
-            int num1 = Convert.ToInt32(Console.ReadLine());
+            int num1 = 4;//Convert.ToInt32(Console.ReadLine());
             //string num1 = Console.ReadLine();
             string binaryNum1 = Convert.ToString(num1, 2);
 
             Console.WriteLine("Second binary number: ");
-            int num2 = Convert.ToInt32(Console.ReadLine());
+            int num2 = 5;//Convert.ToInt32(Console.ReadLine());
             //string num2 = Console.ReadLine();
             string binaryNum2 = Convert.ToString(num2, 2);
 
