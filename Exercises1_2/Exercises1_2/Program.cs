@@ -9,51 +9,65 @@ namespace Exercises1_2
     {
         static void Main(string[] args)
         {
-            /*
-            //find largest n such that
-            //n < 8 * log2(n)
-            for (int n = 1000; n > 0; n--)
-            {
-                if (n < 8 * Math.Log(n, 2))
-                {
-                    Console.WriteLine($"answer is {n}");
-                    Console.ReadLine();
-                    
-                }
-            }
-            //if n < 43 ensertion sort is faster than
-            */
-
-            /*
-            //find smallest number where n > 0
-            for (int n = 1; n < 1000; n++)
-            {
-                if(100 * Math.Pow(n, 2)<Math.Pow(2, n))
-                {
-                    Console.WriteLine($"The answer is {n}");
-                    //Console.ReadLine();
-                    break;
-                }
-            }
-            */
-
-
-
-
-            //Insertion sort
             int[] array = new int[] { 31, 41, 59, 26, 41, 58 };
-            //InsertionSort(array);
+            LargestN();
+            SmallestN();
             PrintInsertionSort(array);
             PrintInsertionSortD(array);
             AddBinary();
             Console.ReadKey();
         }
 
+        private static void SmallestN()
+        {
+            //find smallest number where n > 0
+            for (int n = 1; n < 1000; n++)
+            {
+                if (100 * Math.Pow(n, 2) < Math.Pow(2, n))
+                {
+                    Console.WriteLine($"The smallest numger is {n}");
+                    break;
+                    //Console.ReadLine();
+                }
+            }
+        }
+
+        private static void LargestN()
+        {
+            //find largest n such that
+            //n < 8 * log2(n)
+            for (int n = 1000; n > 0; n--)
+            {
+                if (n < 8 * Math.Log(n, 2))
+                {
+                    Console.WriteLine($"The largest number is {n}");
+                    break;
+                }
+            }
+            //if n < 43 ensertion sort is faster than
+        }
+
         private static void AddBinary()
         {
-            int n = 4;
-            bool[] array1 = new bool[n];
-            bool[] array2 = new bool[n];
+            Console.WriteLine();
+            Console.WriteLine();
+
+            //int n = 4;
+
+            Console.WriteLine("First binary number: ");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            //string num1 = Console.ReadLine();
+            string binaryNum1 = Convert.ToString(num1, 2);
+
+            Console.WriteLine("Second binary number: ");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            //string num2 = Console.ReadLine();
+            string binaryNum2 = Convert.ToString(num2, 2);
+
+
+            Console.WriteLine($"Your number are {binaryNum1} ({binaryNum1.Length}) and {binaryNum2} ({binaryNum2.Length})");
+
+
         }
 
         private static void PrintInsertionSortD(int[] array)
