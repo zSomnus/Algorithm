@@ -34,9 +34,9 @@ namespace MergeSorting
                 return lst;
             }
             int mid = lst.Count / 2;
-            List<int> left = new List<int>();  // 定义左侧List
-            List<int> right = new List<int>(); // 定义右侧List
-                                               // 以下兩個循環把 lst 分為左右兩個 List
+            List<int> left = new List<int>();
+            List<int> right = new List<int>();
+
             for (int i = 0; i < mid; i++)
                 left.Add(lst[i]);
             for (int j = mid; j < lst.Count; j++)
