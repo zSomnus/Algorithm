@@ -142,8 +142,14 @@ namespace Practice02
             {
                 int q = (p + r) / 2;
                 MergeSort(A, p, q);
+<<<<<<< Updated upstream
                 MergeSort(A, q + 1, r);
                 Merge(A, p, q, r);
+=======
+                //MergeSort(A, q + 1, r);
+                Merge(A, p, q, r);
+                Console.WriteLine($"p: {p} p+1: {p + 1} r: {r}");
+>>>>>>> Stashed changes
             }
         }
 

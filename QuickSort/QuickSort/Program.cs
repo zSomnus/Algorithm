@@ -6,7 +6,6 @@ namespace QuickSort
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             int[] A = { 9, 3, 6, 8, 1, 4 };
             //Partition(A, 0, 5);
             Quicksorting(A, 0, 5);
@@ -19,13 +18,23 @@ namespace QuickSort
 
         private static void Quicksorting(int[] a, int p, int r)
         {
-            int q = Partition(a, p, r);
+            
+            if (a != null)
+            {
+                Console.WriteLine(String.Join(", ", a));
+            }
             if (p<r)
             {
                 //Console.WriteLine(Convert.ToInt32(Partition(a, p, r)));
+                int q = Partition(a, p, r);
 
                 Console.WriteLine(q);
                 Quicksorting(a, p, q - 1);
+                Console.WriteLine("sort left");
+                //if (a != null)
+                //{
+                //    Console.WriteLine(String.Join(", ", a));
+                //}
                 Quicksorting(a, q + 1, r);
             }
 
@@ -34,8 +43,8 @@ namespace QuickSort
         private static int Partition(int[] a, int p, int r)
         {
             int x = a[r];
-            int i = p;
-            for (int j = p; j < r; j++)
+            int i = p - 1;
+            for (int j = p; j < r - 1; j++)
             {
                 if (a[j] <= x)
                 {
