@@ -35,21 +35,22 @@ namespace Practice02
             MergeSort(A);
 
             ////E.
-            //A = new int[] { 27, 17, 3, 16, 13, 10, 1, 5, 7, 12, 4, 8, 9, 0 };
-            //MaxHeapify(A, 3);
+            A = new int[] { 27, 17, 3, 16, 13, 10, 1, 5, 7, 12, 4, 8, 9, 0 };
+            MaxHeapify(A, 3);
 
             ////F.
-            //A = new int[] { 5, 3, 17, 10, 84, 19, 6, 22, 0 };
-            //BuildMaxHeap(A);
+            A = new int[] { 5, 3, 17, 10, 84, 19, 6, 22, 0 };
+            BuildMaxHeap(A);
 
             ////G.
-            //A = new int[] { 64, 14, 47, 32, 75, 34, 75, 34, 56, 25, 45, 34, 67, 45, 67 };
-            //HeapSort(A);
+            A = new int[] { 64, 14, 47, 32, 75, 34, 75, 34, 56, 25, 45, 34, 67, 45, 67 };
+            HeapSort(A);
 
             if (A != null)
             {
                 Console.WriteLine(String.Join(", ", A));
             }
+            Console.ReadKey();
         }
 
         /// <summary>
@@ -140,11 +141,9 @@ namespace Practice02
             if (p < r)
             {
                 int q = (p + r) / 2;
-                //MergeSort(A, p, q);
+                MergeSort(A, p, q);
                 MergeSort(A, q + 1, r);
                 Merge(A, p, q, r);
-                Console.WriteLine($"p: {p} p+1: {p + 1} r: {r}");
-
             }
         }
 
@@ -186,6 +185,29 @@ namespace Practice02
         public static void MaxHeapify(int[] A, int i, int heapSize)
         {
             //TODO
+            int l = Left(i);
+            int r = Right(i);
+
+            int largest = 0;
+
+            if(l < heapSize && A[l] > A[i]){
+                largest = l;
+            }else{
+                largest = i;
+            }
+
+            if(r <= heapSize && A[r] > A[largest]){
+                largest = r;
+            }
+
+            if (largest != i)
+            {
+                //excahnge
+                int temp = A[i];
+                A[i] = A[largest];
+                A[largest] = temp;
+                MaxHeapify(A, largest);
+            }
         }
 
         /// <summary>
@@ -205,6 +227,11 @@ namespace Practice02
         public static void BuildMaxHeap(int[] A)
         {
             //TODO
+            int heapSize = A.Length;
+            for (int i = A.Length / 2; i > 0; i--)  //A.Length/2 is the first father element that has children.
+            {
+                MaxHeapify(A, i);
+            }
         }
 
         /// <summary>
@@ -214,6 +241,15 @@ namespace Practice02
         public static void HeapSort(int[] A)
         {
             //TODO
+            int heapSize = A.Length;
+            BuildMaxHeap(A);
+            for (int i = A.Length; i >= 2; i--)
+            {
+                int temp = A[0];
+                A[0] = A[i];
+                A[i] = A[0];
+                MaxHeapify(A, 0);
+            }
         }
     }
 }

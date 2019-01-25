@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickSort", "QuickSort\QuickSort.csproj", "{57045334-E562-468F-9023-119AA073F41E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57045334-E562-468F-9023-119AA073F41E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57045334-E562-468F-9023-119AA073F41E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57045334-E562-468F-9023-119AA073F41E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57045334-E562-468F-9023-119AA073F41E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
